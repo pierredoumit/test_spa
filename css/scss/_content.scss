@@ -1,0 +1,123 @@
+@import '_variables';
+
+.Content {
+    display: flex;
+    margin-top: 15vh;
+
+    &__Left {
+        width: 15vh;
+        height: 85vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        &.end {
+            align-items: flex-start;
+
+            .Content__LeftTxt {
+                top: 15vh;
+
+                &::before {
+                    left: auto;
+                    right: -85%;
+                    top: 14px;
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+        &Txt {
+            transform: rotate(-90deg);
+            color: #35353b;
+            font-size: 14px;
+            top: -15vh;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            min-width: 95px;
+
+            &::before {
+                background-image: url(../../images/down_2.svg);
+                width: 32px;
+                height: 9px;
+                transition: all 0.5s ease-in-out;
+                content: "";
+                transform: rotate(90deg);
+                display: block;
+                position: relative;
+                left: -30px;
+                top: 10px;
+            }
+        }
+    }
+
+    &__Right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 85vh;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        top: 0px;
+
+        &Slide {
+            height: 85vh;
+            min-height: 85vh;
+            flex: 1;
+
+            &__Img {
+                background-image: url('../../images/img.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+                display: flex;
+                position: relative;
+
+                &Mask {
+                    position: absolute;
+                    right: 0;
+                    height: 15vh;
+                    align-items: center;
+                    bottom: 23vh;
+                    width: 53vw;
+                    backdrop-filter: blur(6px);
+                    display: flex;
+                    justify-content: center;
+
+                    h2 {
+                        color: $White;
+                        font-size: 75px;
+                        text-align: right;
+                        line-height: 60px;
+                        position: relative;
+                        top: -5vh;
+
+                        span {
+                            display: block;
+                            color: $Orange;
+                            text-align: left;
+                            position: relative;
+                            left: -100px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:420px) {
+    .Content__RightSlide__ImgMask h2 {
+        color: #f6f4f1;
+        font-size: 48px;
+        text-align: right;
+        line-height: 40px;
+        position: relative;
+        top: -5vh;
+
+        span {
+            left: -55px;
+        }
+    }
+}

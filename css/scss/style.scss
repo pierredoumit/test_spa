@@ -1,0 +1,97 @@
+$White: #f6f4f1;
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+a,
+p,
+dl,
+dt,
+dd,
+input,
+textarea,
+select,
+ul,
+li button,
+area,
+map {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+
+html,
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: $White;
+}
+
+.wrapper {
+	float: left;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	min-height: 100%;
+}
+
+.center_left {
+	left: 50%;
+	-webkit-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%);
+	-o-transform: translate(-50%, 0%);
+	-ms-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+}
+
+.center_top {
+	top: 50%;
+	-webkit-transform: translate(0%, -50%);
+	-moz-transform: translate(0%, -50%);
+	-o-transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%);
+	transform: translate(0%, -50%);
+}
+
+.center_both {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.transition {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.width-100 {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.content {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+
+@import '_variables';
+@import '_header';
+@import '_content';
